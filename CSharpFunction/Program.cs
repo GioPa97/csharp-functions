@@ -2,6 +2,8 @@
 int[] arrayDiNumeri = { 2, 6, 7, 5, 3, 9 };
 StampaArrayInteri(arrayDiNumeri);
 
+int quadratoNumero = quadrato(2);
+Console.WriteLine(quadratoNumero);
 
 
 
@@ -35,3 +37,8 @@ void StampaArrayInteri(int[] arrayInteri)
     Console.WriteLine("]");
 }
 
+int quadrato(int numero)
+{
+    int quadrato = numero * numero;
+        return  quadrato;
+}
