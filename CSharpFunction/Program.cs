@@ -15,6 +15,10 @@ int sommaElementiArray = sommaArray(arrayDiNumeri);
 Console.WriteLine("La somma degli elementi dell'Array originale è:");
 Console.WriteLine(sommaElementiArray);
 
+int sommaQuadratoElementiArray = sommaQuadratiElementiArray(arrayDiNumeri);
+Console.WriteLine("La somma dei quadrati degli elementi dell'Array  è:");
+Console.WriteLine(sommaQuadratoElementiArray);
+
 
 
 
@@ -80,3 +84,12 @@ int sommaArray(int[] array)
     return sommaArray;
 }
 //
+
+int sommaQuadratiElementiArray(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone();
+    int[]arrayElevato = elevaArrayAlQuadrato(copiaArray);
+    
+    int sommaElementiArray = sommaArray(arrayElevato);
+    return  sommaElementiArray;
+}
