@@ -6,8 +6,8 @@ int quadratoNumero = quadrato(2);
 Console.WriteLine(quadratoNumero);
 
 
-int sommaArray = sommaElementiArray(arrayDiNumeri);
-Console.WriteLine(sommaArray);
+int[] arrayDiNumeriAlQuadrato = elevaArrayAlQuadrato(arrayDiNumeri);
+StampaArrayInteri(arrayDiNumeriAlQuadrato);
 
 
 
@@ -60,7 +60,7 @@ int elevaArrayAlQuadrato(int[] array)
     int[] copiaArray = (int[])array.Clone();
     for (int i = 0; i < copiaArray.Length; i++)
     {
-        copiaArray[i] = copiaArray[i] + 1;
+        copiaArray[i] = copiaArray[i] * copiaArray[i];
     }
     return copiaArray;
 }
