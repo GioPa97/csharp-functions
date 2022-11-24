@@ -6,7 +6,8 @@ int quadratoNumero = quadrato(2);
 Console.WriteLine(quadratoNumero);
 
 
-
+int sommaArray = sommaElementiArray(arrayDiNumeri);
+Console.WriteLine(sommaArray);
 
 
 
@@ -16,7 +17,6 @@ Console.WriteLine(quadratoNumero);
 
 
 // --------------- DICHIARAZIONE DELLE FUNZIONI ------------------------
-
 // Creo una funzione che stampa in console un array di interi
 void StampaArrayInteri(int[] arrayInteri)
 {
@@ -36,9 +36,32 @@ void StampaArrayInteri(int[] arrayInteri)
 
     Console.WriteLine("]");
 }
+//
 
+
+
+//
 int quadrato(int numero)
 {
     int quadrato = numero * numero;
-        return  quadrato;
+    return quadrato;
 }
+//
+
+
+
+
+
+
+
+//
+int elevaArrayAlQuadrato(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone();
+    for (int i = 0; i < copiaArray.Length; i++)
+    {
+        copiaArray[i] = copiaArray[i] + 1;
+    }
+    return copiaArray;
+}
+//
