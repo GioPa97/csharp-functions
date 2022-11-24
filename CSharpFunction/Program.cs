@@ -1,5 +1,6 @@
 ﻿
 int[] arrayDiNumeri = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Gli elementi dell'Array sono:");
 StampaArrayInteri(arrayDiNumeri);
 
 int quadratoNumero = quadrato(2);
@@ -7,10 +8,12 @@ Console.WriteLine(quadratoNumero);
 
 
 int[] arrayDiNumeriAlQuadrato = elevaArrayAlQuadrato(arrayDiNumeri);
+Console.WriteLine("Gli elementi dell'Array elevati al quadrato sono:");
 StampaArrayInteri(arrayDiNumeriAlQuadrato);
 
-
-
+int sommaElementiArray = sommaArray(arrayDiNumeri);
+Console.WriteLine("La somma degli elementi dell'Array originale è:");
+Console.WriteLine(sommaElementiArray);
 
 
 
@@ -55,7 +58,7 @@ int quadrato(int numero)
 
 
 //
-int elevaArrayAlQuadrato(int[] array)
+int [] elevaArrayAlQuadrato(int[] array)
 {
     int[] copiaArray = (int[])array.Clone();
     for (int i = 0; i < copiaArray.Length; i++)
@@ -63,5 +66,17 @@ int elevaArrayAlQuadrato(int[] array)
         copiaArray[i] = copiaArray[i] * copiaArray[i];
     }
     return copiaArray;
+}
+//
+
+//
+int sommaArray(int[] array)
+{
+    int sommaArray = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        sommaArray += array[i];
+    }
+    return sommaArray;
 }
 //
